@@ -30,5 +30,9 @@ public class UIKeywords {
 				System.out.println(element.isDisplayed());
 				Assert.assertTrue(element.isDisplayed());
 	}
+	public static void click() throws IOException {
+		String SignIn=rpf.get_SignIn_Button();
+		driver.findElement(By.xpath(SignIn)).click();
+	}
 
 }

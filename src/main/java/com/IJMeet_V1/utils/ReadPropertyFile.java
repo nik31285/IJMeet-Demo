@@ -23,5 +23,10 @@ public class ReadPropertyFile {
 		String logo1=prop.getProperty("logo_css");
 		return logo1;
 	}
+	public String get_SignIn_Button() throws IOException {
+		openfile();
+		String SignIn=prop.getProperty("signInButton");
+		return SignIn;
+	}
 
 }

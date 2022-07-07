@@ -18,5 +18,30 @@ public class HomePageStepDefi {
 	public void logo_visibility_check() throws IOException {
 		UIKeywords.isVisible();
 	}
+	
+	@Given("User clicks on sign in button")
+	public void user_clicks_on_sign_in_button() throws IOException {
+	    
+		UIKeywords.click();
+	}
+
+//	@When("User enters valid email address and password")
+//	public void user_enters_valid_email_address_and_password() {
+//	    // Write code here that turns the phrase above into concrete actions
+//	    throw new io.cucumber.java.PendingException();
+//	}
+//
+//	@When("click on sign in button")
+//	public void click_on_sign_in_button() {
+//	    // Write code here that turns the phrase above into concrete actions
+//	    throw new io.cucumber.java.PendingException();
+//	}
+//
+//	@Then("User Navigated to home page")
+//	public void user_navigated_to_home_page() {
+//	    // Write code here that turns the phrase above into concrete actions
+//	    throw new io.cucumber.java.PendingException();
+//	}
+
 
 }
