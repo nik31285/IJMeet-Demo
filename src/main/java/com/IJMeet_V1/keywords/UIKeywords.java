@@ -30,9 +30,17 @@ public class UIKeywords {
 				System.out.println(element.isDisplayed());
 				Assert.assertTrue(element.isDisplayed());
 	}
-	public static void click() throws IOException {
-		String SignIn=rpf.get_SignIn_Button();
-		driver.findElement(By.xpath(SignIn)).click();
+	public static void EnterText(String key1, String key2) throws IOException {
+		String css=rpf.get_value(key1);
+		String text=rpf.get_value(key2);
+		driver.findElement(By.cssSelector(css)).sendKeys(text);
+	}
+	public static void click(String key) throws IOException {
+		String value=rpf.get_value(key);
+		if(key.contains("css"))
+		driver.findElement(By.cssSelector(value)).click();
+		else
+			driver.findElement(By.xpath(value)).click();
 	}
 
 }

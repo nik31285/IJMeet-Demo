@@ -28,5 +28,10 @@ public class ReadPropertyFile {
 		String SignIn=prop.getProperty("signInButton");
 		return SignIn;
 	}
+	public String get_value(String key) throws IOException {
+		openfile();
+		String value=prop.getProperty(key);
+		return value;
+	}
 
 }
