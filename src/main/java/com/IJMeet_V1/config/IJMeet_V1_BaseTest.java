@@ -8,9 +8,9 @@ import io.cucumber.java.BeforeAll;
 
 public class IJMeet_V1_BaseTest {
 
-	@BeforeAll
-	public static void before_all() throws IOException {
-		UIKeywords.launchBrowser();
-		UIKeywords.launchURL();
-	}
+//	@BeforeAll
+//	public static void before_all() throws IOException {
+//		UIKeywords.launchBrowser();
+//		UIKeywords.launchURL();
+//	}
 }

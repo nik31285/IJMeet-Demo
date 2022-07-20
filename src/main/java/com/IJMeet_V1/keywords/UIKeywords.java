@@ -44,8 +44,20 @@ public class UIKeywords {
 			driver.findElement(By.xpath(value)).click();
 	}
 	public static void selectDropdown(String dropDownName, String textInList) throws IOException {
-		String css=rpf.get_value(dropDownName);
-		
+		String value=rpf.get_value(dropDownName);
+		WebElement e;
+		if(dropDownName.contains("css"))
+			e=driver.findElement(By.cssSelector(value));
+		else
+			e=driver.findElement(By.xpath(value));
+		Select dropDown=new Select(e);
+		dropDown.selectByVisibleText(textInList);
 	}
-
+	public static void clear(String key) throws IOException {
+		String value=rpf.get_value(key);
+		if(key.contains("css"))
+		driver.findElement(By.cssSelector(value)).clear();
+		else
+		driver.findElement(By.xpath(value)).clear();
+	}
 }
