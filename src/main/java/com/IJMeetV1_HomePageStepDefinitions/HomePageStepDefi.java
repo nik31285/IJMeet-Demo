@@ -29,9 +29,23 @@ public class HomePageStepDefi {
 		UIKeywords.EnterText("emailAddress_css","valid_email_id");
 		UIKeywords.EnterText("password_css","valid_password");
 	}
-	@When("click on sign in button")
+	@When("select remember me check box")
+	public void select_remember_me_check_box() throws IOException {
+		UIKeywords.click("show_password_css");
+		UIKeywords.click("remember_me_css");
+		UIKeywords.click("show_password_css");
+	}
+	@Then("click on sign in button")
 	public void click_on_sign_in_button() throws IOException {
 		UIKeywords.click("submitSignIn_css");
+	}
+	@Then("click on Schedule Meeting icon")
+	public void click_on_Schedule_Meeting_() throws IOException {
+		UIKeywords.click("schedule_meeting_css");
+	}
+	@Then("select TimeZone")
+	public void select_TimeZone() {
+//		UIKeywords.selectDropdown("Time_Zone_css","(GMT+05:30) Asia/Kolkata");
 	}
 //
 //	@Then("User Navigated to home page")
